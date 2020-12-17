@@ -4,23 +4,25 @@ import multiprocessing as mp
 from multiprocessing import Queue, Lock
 class TestingCrawler(unittest.TestCase):
 
+    # Setting up the queue and lock for every test
     def setUp(self):
         self.testQueue = Queue()
         self.lock = Lock()
 
+    # Print statement to seperate fetched links
     def tearDown(self):
         print("Next Test")
+
 
     def test_rescale(self):
         url = "https://www.rescale.com/"
         self.testQueue.put(url)
-        result = crawler.get_html_func(self.testQueue,self.lock)
+        result = Crawler.get_html_func(self.testQueue,self.lock)
 
         self.assertIn("https://resources.rescale.com/", result)
         self.assertIn("https://www.linkedin.com/company/rescale/", result)
         self.assertIn("https://twitter.com/rescaleinc", result)
         self.assertIn("https://www.facebook.com/rescaleinc/", result)
-
 
 
     def test_alexa_top100(self):
@@ -47,6 +49,7 @@ class TestingCrawler(unittest.TestCase):
         self.assertIn("http://quotes.toscrape.com/author/Thomas-A-Edison", result)
         self.assertIn("http://quotes.toscrape.com/page/2/", result)
         self.assertIn("http://quotes.toscrape.com/author/Marilyn-Monroe", result)
+
 
     def test_geeksforgeeks(self):
         url = "https://www.geeksforgeeks.org/"
