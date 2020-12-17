@@ -1,15 +1,15 @@
 <h1>About This Project</h1>
 <p>
-This program is a Web Crawler created in Python which works with multiple processes. With the usage of multiple modules including requests, BeautifulSoup, multiprocessing, and many more. The purpose of the script is to fetch all href tags and print in the format following format: 
+This program is a Web Crawler created in Python which works with multiple processes. With the usage of multiple modules including requests, BeautifulSoup, multiprocessing, and many more. The script will only fetch pages which return with GET code 200 (Sucessful) as a safety precaution.The purpose of the script is to fetch all href tags and print in the format following format: 
+  
 ```
 <URL of page fetched>
   <URL found on page>
   <URL found on page>
-….
 <URL of page fetched>
   <URL found on page>
   <URL found on page>
-    ```
+```
 
 Please read through the following steps to ensure script is ran correctly.
 </p>
@@ -23,13 +23,18 @@ Assuming you have already cloned this directory, run the following command in yo
 
 This will download all the packages required to run the program.
 
-<h1>Running With Your Link</h1><p>
-  As a <b>WARNING</b> this program may not automatically stop, due to the arbitrary amount of possible links fetched. Due to the structure of the program, please be ready to manually stop the program from running once you've received sufficient links fetched and listed. The command to stop a python script can vary by enviroment, but typically the command `CNTL + Z` then `killall python3` will work in killing all processes created by this script and all python3 scripts.
+<p>
+  As a <b>WARNING</b> this program may not automatically stop, due to the arbitrary amount of possible links fetched. Due to the structure of the program, please be ready to manually stop the program from running once you've received sufficient links fetched and listed. The command to stop a python script can vary by enviroment, but typically the command <kbd>Ctrl</kbd> + <kbd>Z</kbd> then  
   
-  <h2>Applying your link</h2> 
+  `$ killall python3` will work in killing all processes created by this script and all python3 scripts.
+  
+  <h1>Running With Your Link</h1> 
   <p>
     To search scrape your link, type in the following command:
-    `python3 Crawler.py $YOURLINK` and replace $YOURLINK with the http/https link you'd like to begin web scraping. 
+  
+    $ python3 Crawler.py $YOURLINK
+  and replace 
+  `$YOURLINK` with the http/https link you'd like to begin web scraping. 
   </p>
   </p>
   
