@@ -1,5 +1,5 @@
 import unittest
-import crawler
+import Crawler
 import multiprocessing as mp
 from multiprocessing import Queue, Lock
 class TestingCrawler(unittest.TestCase):
