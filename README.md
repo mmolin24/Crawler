@@ -15,14 +15,18 @@ Please read through the following steps to ensure script is ran correctly.
 </p>
 <h1>Setup</h1><p>
 To get started we must ensure that all the packages are installed to be able to run the script properly. 
-First off, if you do not have pip installed already, please follow the link below to ensure you have pip installed.
+First off, if you have not installed python3 or above already, follow the link to ensure proper installation:
+https://www.python.org/downloads/
+second, if you do not have pip installed already, please follow the link to ensure you have pip installed.
 https://pip.pypa.io/en/stable/installing/#
 
-Assuming you have already cloned this directory, run the following command in your linux/bash command console:
-`$ pip install .` </p>
+Assuming you have already cloned this directory run the following command in your linux/bash command console:
 
+```
+$ pip install .
+```
 This will download all the packages required to run the program.
-
+</p>
 <p>
   As a <b>WARNING</b> this program may not automatically stop, due to the arbitrary amount of possible links fetched. Due to the structure of the program, please be ready to manually stop the program from running once you've received sufficient links fetched and listed. The command to stop a python script can vary by enviroment, but typically the command <kbd>Ctrl</kbd> + <kbd>Z</kbd> then  
   
