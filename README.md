@@ -19,7 +19,7 @@ First off, if you do not have pip installed already, please follow the link belo
 https://pip.pypa.io/en/stable/installing/#
 
 Assuming you have already cloned this directory, run the following command in your linux/bash command console:
-`pip install .` </p>
+`$ pip install .` </p>
 
 This will download all the packages required to run the program.
 
