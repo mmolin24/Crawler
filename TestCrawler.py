@@ -26,7 +26,7 @@ class TestingCrawler(unittest.TestCase):
     def test_alexa_top100(self):
         url = "https://www.alexa.com/topsites"
         self.testQueue.put(url)
-        result = crawler.get_html_func(self.testQueue,self.lock)
+        result = Crawler.get_html_func(self.testQueue,self.lock)
 
         self.assertIn("https://www.alexa.com/siteinfo/google.com", result)
         self.assertIn("https://www.alexa.com/siteinfo/youtube.com", result)
@@ -39,7 +39,7 @@ class TestingCrawler(unittest.TestCase):
     def test_toscrape(self):
         url = "http://quotes.toscrape.com/"
         self.testQueue.put(url)
-        result = crawler.get_html_func(self.testQueue,self.lock)
+        result = Crawler.get_html_func(self.testQueue,self.lock)
 
         self.assertIn("http://quotes.toscrape.com/tag/choices/page/1/", result)
         self.assertIn("http://quotes.toscrape.com/tag/inspirational/page/1/", result)
@@ -51,7 +51,7 @@ class TestingCrawler(unittest.TestCase):
     def test_geeksforgeeks(self):
         url = "https://www.geeksforgeeks.org/"
         self.testQueue.put(url)
-        result = crawler.get_html_func(self.testQueue,self.lock)
+        result = Crawler.get_html_func(self.testQueue,self.lock)
 
         self.assertIn("https://www.geeksforgeeks.org/about/", result)
         self.assertIn("https://www.geeksforgeeks.org/fundamentals-of-algorithms/", result)
