@@ -39,5 +39,11 @@ This will download all the packages required to run the program.
   </p>
   
 <h1>Running My Provided Tests</h1><p>
-   Within this repository, I've included multiple tests which created by myself. The tests will run and print out the output alongside the status of the tests. The current links which will be tested are: https://www.rescale.com/, https://www.alexa.com/topsites, http://quotes.toscrape.com/, and https://www.geeksforgeeks.org/. The links being tested with AssertIn functions are manually selected off the website to test the ability to fetch visible href tags. 
+   Within this repository, I've included multiple tests which created by myself. The tests will run and print out the output alongside the status of the tests. The current links which will be tested are: https://www.rescale.com/, https://www.alexa.com/topsites, http://quotes.toscrape.com/, and https://www.geeksforgeeks.org/. The links being tested with AssertIn functions are manually selected off the website to test the ability to fetch visible href tags. The command below will run all of the tests within the TestCrawler file:
+  
+  ```
+  $ python3 TestCrawler.py
+  ```
+  
+  
   </p>
